@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <link href="css/main.css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+        <title>Digital Planet</title>
+    </head>
+    <body>
+    <section class="order">
+        <button class="order-close-button close-button"><img src="img/+.svg"></button>
+        <h4>Закажите VR планетарий</h4>
+        <p>Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
+        <form class="order-form">
+            <input
+                type="text"
+                id="orderusname" 
+                name="order-user-name" 
+                placeholder="Ваше имя"
+                class="order-input-name"
+                required>
+            <span class="error" id="nameError">Неверный ввод</span>
+            <input
+                type="tel"
+                id="orderustel" 
+                name="order-user-tel" 
+                placeholder="Ваш телефон"
+                class="order-input-tel"
+                required>
+            <span class="error" id="telError"></span>
+            <input
+                type="submit"
+                id="suborder"
+                name="user-order"
+                placeholder="Отправить"
+                class="submit-order">
+        </form>
+    </section>
+    <section class="success">
+        <button class="success-close-button close-button"><img src="img/+.svg"></button>
+        <img class="success-img" src="img/Success.png" width="60" height="60">
+        <h4>Сообщение успешно отправлено!</h4>
+        <p>Мы обязательно свяжемся с вами в ближайшее время и подробно ответим на ваш вопрос, будьте на связи!</p>
+        <button class="success-ok">ок</button>
+    </section>
+    <section class="page">
+    <section class="main-page">
+        <header class="header-first">
+            <a class="logo" href="digitalplanet.html">
+                <img class="logoreg" src="img/logo.svg"> 
+                <img class="logohover" src="img/logo-hover.svg">
+                Digital Planet
+            </a>
+            <ul class="page-list">
+                <li class="page-title">
+                    <button class="page-title-button about-button">О продукте</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button how-button">Как работает</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button tech-button">Технология</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button QA-button">Вопросы</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button contacts-button">Контакты</button>
+                </li>                
+            </ul>
+            <button class="header-order">Заказать</button>
+            <a class="telephone" href="tel:88005553575">8 (800) 555 35 75</a>
+        </header>        
+        <main class="main-main-page">
+            <h1> Digital Planet VR</h1>
+            <p class="main-description">Образовательный виртуальный планетарий в Новороссийске. <br>
+                Познавательное приключение в мир звёзд и галактик.</p>
+            <div class="main-buttons">
+                <button class="main-button main-button-order">
+                    <img class="main-button-pic" src="img/order-pic.png">
+                    <p class="main-button-text">Заказать</p>
+                </button>
+                <button class="main-button main-button-video">
+                    <img class="main-button-pic" src="img/vid-pic.png">
+                    <p class="main-button-text">Видео</p>
+            </button>
+            </div>
+        </main>
+        <footer class="main-page-footer">            
+            <div class="social-networks">
+                <a class="facebook" href=""><img src="img/fb.svg" width="11" height="22"></a>
+                <a class="vk" href=""><img src="img/vk.svg" width="28" height="15"></a>
+            </div>
+            <button class="main-page-scroll">
+                <p>Скролл вниз</p> 
+                <img class="main-page-scroll-img" src="img/scroll.svg"> 
+            </button>
+        </footer>
+    </section>
+    <section class="about non-main">
+        <header>
+            <a class="logo" href="digitalplanet.html">
+                <img class="logoreg" src="img/logo.svg"> 
+                <img class="logohover" src="img/logo-hover.svg">
+                Digital Planet
+            </a>
+            <ul class="page-list">
+                <li class="page-title">
+                    <button class="page-title-button about-button active-title">О продукте</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button how-button">Как работает</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button tech-button">Технология</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button QA-button">Вопросы</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button contacts-button">Контакты</button>
+                </li>                
+            </ul>
+            <button class="header-order">Заказать</button>
+            <a class="telephone" href="tel:88005553575">8 (800) 555 35 75</a>
+        </header>   
+        <main class="about-main">
+            <h2 class="about-title">Что такое VR-планетарий?&nbsp&nbsp</h2>
+                <div class="about-flex">
+                    <p class="about-description">Это образовательная программа, использующая технологию виртуальной реальности. <br> <br>
+                        Зрителям выдаются очки виртуальной реальности, оператор запускает сеанс планетария на всех очках одновременно. В коллекции фильмов идут обучающие картины о космосе, астрономии  и обществознании. <br> <br>
+                        За счёт реалистичности  и имитации игры такое обучение повышает мотивацию и стимулирует активную мозговую деятельность ребёнка. </p>
+                    <div class="about-gallery-section">
+                        <article class="about-gallery">
+                            <div class="gallery-rectangle"></div>
+                            <ul class="gallery">
+                                <li class="gallery-image gallery-shown"><img src="img/astonaut.jpg" width="562" height="300"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/planets.jpg" width="562" height="300"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/telescope.jpg" width="562" height="300"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/astonaut.jpg" width="562" height="300"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/astonaut.jpg" width="562" height="300"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/astonaut.jpg" width="562" height="300"></li>
+                            </ul>
+                            <h3 class="about-gallery-title"> Что показываем в планетарии</h3>
+                        </article>
+                        <article class = "about-gallery-buttons">
+                            <p>&nbsp</p><p class="gallery-switch-count">01 /</p><p class="gallery-switch-count-all">&nbsp06</p>
+                            <button class="gallery-switch gallery-switch-back">
+                                <img class="switchbackreg" src="img/switch.svg">
+                                <img class="switchbackhover" src="img/switchhover.svg">
+                            </button>
+                            <button class="gallery-switch gallery-switch-forward">
+                                <img class="switchforwardreg" src="img/switch.svg">
+                                <img class="switchforwardhover" src="img/switchhover.svg">
+                            </button>
+                        </article>
+                    </div>
+                </div>
+        </main>
+        <footer class="about-footer">            
+            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
+        </footer>
+    </section>
+    <section class="how non-main">
+        <header>
+            <a class="logo" href="digitalplanet.html">
+                <img class="logoreg" src="img/logo.svg"> 
+                <img class="logohover" src="img/logo-hover.svg">
+                Digital Planet
+            </a>
+            <ul class="page-list">
+                <li class="page-title">
+                    <button class="page-title-button about-button">О продукте</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button how-button active-title">Как работает</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button tech-button">Технология</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button QA-button">Вопросы</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button contacts-button">Контакты</button>
+                </li>                
+            </ul>
+            <button class="header-order">Заказать</button>
+            <a class="telephone" href="tel:88005553575">8 (800) 555 35 75</a>
+        </header>   
+        <main class="how-main">
+            <img class="path-1" src="img/paths/1-2.svg">
+            <img class="path-2" src="img/paths/2-3.svg">
+            <img class="path-3" src="img/paths/3-4.svg">
+            <h2 class="how-title">Как это работает?&nbsp&nbsp</h2>
+            <ul class="how-sequence">
+                <li class = "how-action how-action-1">
+                    <div class = "action-photo">
+                        <div class="action-rectangle"></div>
+                        <img class="action-img" src="img/action-1.jpg">
+                        <div class="action-number">
+                            <p>1</p>
+                        </div>
+                    </div>
+                    <div class= "action-caption">
+                        <h4 class="action-title">Готовим
+                            инвентарь</h4>
+                        <p class="action-caption-text">Наши специалисты готовят каждые VR-очки к использованию, обрабатывая устройства специальным средством для ухода после каждого сеанса.</p>
+                    </div>
+                </li>
+                <li class = "how-action how-action-2">
+                    <div class = "action-photo">
+                        <div class="action-rectangle"></div>
+                        <img class="action-img" src="img/action-2.jpg">
+                        <div class="action-number">
+                            <p>2</p>
+                        </div>
+                    </div>
+                    <div class= "action-caption">
+                        <h4 class="action-title">Выбираем фильм</h4>
+                        <p class="action-caption-text">В нашем архиве есть образовательные фильмы по теме космоса, астрологиии обществознания. Мы работаем с самым крупным производителем мультимедиа продуктов в РФ.</p>
+                    </div>
+                </li>
+                    <li class = "how-action how-action-3">
+                    <div class = "action-photo">
+                        <div class="action-rectangle"></div>
+                        <img class="action-img" src="img/action-3.jpg">
+                        <div class="action-number">
+                            <p>3</p>
+                        </div>
+                    </div>
+                    <div class= "action-caption">
+                        <h4 class="action-title">Надеваем VR-очки</h4>
+                        <p class="action-caption-text">Ученики получают VR-очки, наш техник помогает им разобраться как правильно надеть очки и закрепить их на голове. Для ребят со зрением, отличным от 100%, техник настраивает диоптрии.</p>
+                    </div>
+                </li>
+                <li class = "how-action how-action-4">
+                    <div class = "action-photo">
+                        <div class="action-rectangle"></div>
+                        <img class="action-img" src="img/action-4.jpg">
+                        <div class="action-number">
+                            <p>4</p>
+                        </div>
+                    </div>
+                    <div class= "action-caption">
+                        <h4 class="action-title">Исследуем галактики!</h4>
+                        <p class="action-caption-text">Ребята окунаются в виртуальные миры и с удовольтсием изучают всё вокруг. После показа остаются яркие эмоции и запоминаются важные моменты о планетах, звёздах и галактике.</p>
+                    </div>
+                </li>
+            </ul>
+        </main>
+        <footer class="how-footer">            
+            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
+        </footer> 
+    </section>
+    <section class="tech non-main">
+        <header>
+            <a class="logo" href="digitalplanet.html">
+                <img class="logoreg" src="img/logo.svg"> 
+                <img class="logohover" src="img/logo-hover.svg">
+                Digital Planet
+            </a>
+            <ul class="page-list">
+                <li class="page-title">
+                    <button class="page-title-button about-button">О продукте</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button how-button">Как работает</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button tech-button active-title">Технология</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button QA-button">Вопросы</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button contacts-button">Контакты</button>
+                </li>                
+            </ul>
+            <button class="header-order">Заказать</button>
+            <a class="telephone" href="tel:88005553575">8 (800) 555 35 75</a>
+        </header>   
+        <main class="tech-main">
+            <img class="ring" src="img/arrows/ring.svg">
+            <div class="ellipse">
+                <img src="img/Ellipse.png">
+                <img class="VR-glasses" src="img/Masters Glass VR-iii.png" width="417" height="214">
+                <button class="magnifier"><img src="img/magnifier.svg" width="40" height="40"></button>
+            </div>
+            <img class="arrow-1" src="img/arrows/arrow-1.svg">
+            <img class="arrow-2" src="img/arrows/arrow-2.svg">
+            <img class="arrow-3" src="img/arrows/arrow-3.svg">
+            <img class="arrow-4" src="img/arrows/arrow-4.svg">
+            <h2 class="tech-title">VR-технология&nbsp&nbsp</h2>
+            <ul class="tech-description">
+                <li class="tech-description-piece tech-description-piece-1">
+                    <h4>Masters Glass VR-iii</h4>
+                    <p>Используем только оригинальные импортные VR-очки. Технологии протестированы и безопасны для глаз. Напряжение во время просмотра — как при прогулке за счёт качественного обёъмного  изображения.</p>
+                </li>
+                <li class="tech-description-piece tech-description-piece-2">
+                    <h4>Безопасность</h4>
+                    <p>Зритель всегда находится в центре зала, и четко зафиксирован в пространстве, что делает просмотр понятным и комфортным. Технология виртуальной реальности не портит зрение, а эффект присутствия развивает креативность и пространственное мышление.</p>
+                </li>
+                <li class="tech-description-piece tech-description-piece-3">
+                    <h4>Оборудование</h4>
+                    <p>Все фильмы воспроизводятся при помощи встроенных в очки экранов мобильных телефонов ведущих брендов. Наши техники привезут всё оборудование с собой: от вас нужно лишь помещение для урока.</p>
+                </li>
+                <li class="tech-description-piece tech-description-piece-4">
+                    <h4>Система крепления</h4>
+                    <p>Подходит под любой размер головы, даже для первоклассника. Во время просмотра не получится навредить голове ребёнка за счёт тщательно проработанной конструкции очков.</p>
+                </li>
+            </ul>
+        </main>
+        <footer class="tech-footer">            
+            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
+        </footer>
+    </section>
+    <section class="QA non-main">
+        <header>
+            <a class="logo" href="digitalplanet.html">
+                <img class="logoreg" src="img/logo.svg"> 
+                <img class="logohover" src="img/logo-hover.svg">
+                Digital Planet
+            </a>
+            <ul class="page-list">
+                <li class="page-title">
+                    <button class="page-title-button about-button">О продукте</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button how-button">Как работает</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button tech-button">Технология</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button QA-button active-title">Вопросы</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button contacts-button">Контакты</button>
+                </li>                
+            </ul>
+            <button class="header-order">Заказать</button>
+            <a class="telephone" href="tel:88005553575">8 (800) 555 35 75</a>
+        </header>   
+        <main class="QA-main">
+            <h2 class="QA-title">Часто задаваемые вопросы&nbsp&nbsp</h2>
+            <ul class="questions">
+                <li class="question">
+                    <div class="question-bar">
+                        <p class="dot">•</p>
+                        <div class="question-bar-content">
+                            <h5>Сколько длится сеанс? Дети не устают во время просмотра?</h5>
+                            <button class="plus-pic"><p>+</p></button>
+                        </div>
+                    </div>
+                    <p class="answer answer-hidden">пупупу</p>
+                </li>
+                <li class="question">
+                    <div class="question-bar">
+                        <p class="dot">•</p>
+                        <div class="question-bar-content">
+                            <h5>Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</h5>
+                            <button class="plus-pic"><p>+</p></button>
+                        </div>
+                    </div>
+                    <p class="answer answer-hidden">VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения и опыта использования аналогичных продуктов мог безопасно и легко пользоваться этой технологией. У нас есть сертификат качества продукции и лицензия для её использования на территории РФ. Для людей с зрением, отличным от идеального, на VR-очках предусмотрена регулировка диоптрий.</p>
+                </li>
+                <li class="question">
+                    <div class="question-bar">
+                        <p class="dot">•</p>
+                        <div class="question-bar-content">
+                            <h5>Действительно ли это образовательный метод, или это лишь игрушка?</h5>
+                            <button class="plus-pic"><p>+</p></button>
+                        </div>
+                    </div>
+                    <p class="answer answer-hidden">пупупу</p>
+                </li>
+                <li class="question">
+                    <div class="question-bar">
+                        <p class="dot">•</p>
+                        <div class="question-bar-content">
+                            <h5>Всё понятно! Хочу заказать выезд VR планетария, что нужно сделать?</h5>
+                            <button class="plus-pic"><p>+</p></button>
+                        </div>
+                    </div>
+                    <p class="answer answer-hidden">пупупу</p>
+                </li>
+            </ul>
+        </main>
+        <footer class="QA-footer">            
+            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
+        </footer>
+    </section>
+    <section class="contacts non-main">
+        <header>
+            <a class="logo" href="digitalplanet.html">
+                <img class="logoreg" src="img/logo.svg"> 
+                <img class="logohover" src="img/logo-hover.svg">
+                Digital Planet
+            </a>
+            <ul class="page-list">
+                <li class="page-title">
+                    <button class="page-title-button about-button">О продукте</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button how-button">Как работает</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button tech-button">Технология</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button QA-button">Вопросы</button>
+                </li>
+                <li>•</li>
+                <li class="page-title">
+                    <button class="page-title-button contacts-button active-title">Контакты</button>
+                </li>                
+            </ul>
+            <button class="header-order">Заказать</button>
+            <a class="telephone" href="tel:88005553575">8 (800) 555 35 75</a>
+        </header>   
+        <main class="contacts-main">
+            <h2>Контакты&nbsp&nbsp</h2>
+            <article class="contacts-article">
+                <ul class="cities">
+                    <li class="city">
+                        <h4>Новороссийск</h4>
+                        <a class="city-telephone" href="tel:+79234650141">+7 (923) 465 – 01 – 41</a>
+                        <a class="city-email" href="mailto:digitalPlanetNR@mail.ru">digitalPlanetNR@mail.ru</a>
+                    </li>
+                    <li class="city">
+                        <h4>Москва</h4>
+                        <a class="city-telephone" href="tel:+74958552419">+7 (495) 855 – 24 – 19</a>
+                        <a class="city-email" href="mailto:digitalPlanetMoscow@mail.ru">digitalPlanetMoscow@mail.ru</a>
+                    </li>
+                    <li class="city">
+                        <h4>Саратов</h4>
+                        <a class="city-telephone" href="tel:+79422212178">+7 (942) 221 – 21 – 78</a>
+                        <a class="city-email" href="mailto:digitalPlanetSaratov@mail.ru">digitalPlanetSaratov@mail.ru</a>                        
+                    </li>
+                </ul>
+                <div class="more-questions">
+                    <h4>Остались вопросы? Задайте их нам!</h4>    
+                    <p>Мы обязательно свяжемся с вами в течение двух рабочих дней</p>
+                    <form class="questions-form">
+                        <div class="more-questions-top">
+                            <input 
+                                type="text" 
+                                id="usname" 
+                                name="user-name" 
+                                placeholder="Ваше имя"
+                                class="input-name" required>
+                            <input 
+                                type="email" 
+                                id="usemail" 
+                                name="user-email" 
+                                placeholder="Ваш e-mail"
+                                class="input-email" required>
+                        </div>
+                        <input 
+                            type="text" 
+                            id="usquestion" 
+                            name="user-question" 
+                            placeholder="Что вас интересует?"
+                            class="input-text"
+                            wrap="soft" required>
+                        <input
+                            type="submit"
+                            id="subquestion"
+                            name="user-question"
+                            placeholder="Отправить"
+                            class="submit-question">      
+                    </form>       
+                </div>
+            </article>
+        </main>
+        <footer class="contacts-footer">
+            <p>© Digital Planet, 2019</p>
+            <p class="copyrite">Детский VR планетарий. Все права защищены.</p>
+            <div class="social-networks-end">
+                <a class="facebook-end" href=""><img src="img/fb.svg" width="8.25" height="16.5"></a>
+                <a class="vk-end" href=""><img src="img/vk.svg" width="23" height="11.25"></a>
+            </div>
+        </footer>
+    </section>
+    </section>
+    <script src="js/digitalplanet.js"></script>
+    </body>
+</html>
