@@ -57,11 +57,16 @@ h4{
     margin: 0;
     padding: 0;
     padding-left: 90px;
-    height: 768px;
     display: block;
     background-image: url("../img/Rectangle.jpg");
     background-repeat: no-repeat;
     background-position: left top;
+}
+
+.part{
+    height: 100vh;
+    max-height: 768px;
+    min-height: 738px;
 }
 
 /*header*/
@@ -187,6 +192,10 @@ footer{
     margin: 0;
     padding: 0;
     padding-bottom: 30px;
+}
+
+footer:last-child{
+    padding-bottom: 0;
 }
 
 .scroll{
@@ -374,7 +383,6 @@ footer{
     margin: 0;
     padding: 0;
     display: block;
-    height: 768px;
     background-image: url("../img/kid_VR.png"), url("../img/bg.jpg");
     background-repeat: no-repeat, no-repeat;
     background-position: right bottom, 0px 0px;
@@ -414,7 +422,7 @@ h1 {
 .main-button {
     margin-top: 71px;
     padding: 17px 38px;
-    border: 2px solid #0DD1A2;
+    border: 2px solid #15B28D;
     border-radius: 2%; /*?????*/
     display: flex;
     align-items: center;
@@ -436,6 +444,7 @@ h1 {
 
 .main-button-order:hover{
     background-color: #0DD1A2;
+    border-color: #0DD1A2;
 }
 
 .main-button-video{
@@ -447,12 +456,14 @@ h1 {
 
 .main-button-video:hover{
     background-color: #0DD1A2;
+    border-color: #0DD1A2;
 }
 
 /*footer*/
 
 .main-page-footer{
     height: 32px;
+    margin-top: 154px;
 }
 
 .social-networks{
@@ -539,9 +550,7 @@ h1 {
     margin-top: 5px;
 }
 
-.main-page-footer{
-    margin-top: 154px;
-}
+
 
 /*about*/
 .about-flex{

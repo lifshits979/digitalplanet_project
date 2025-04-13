@@ -1,28 +1,18 @@
 let page = document.querySelector('.page');
 let body = document.querySelector('body');
+let parts = document.querySelectorAll('.part');
 
 let logos = document.querySelectorAll('.logo');
-let logoregs = document.querySelectorAll('.logoreg');
-let logohovers = document.querySelectorAll('.logohover');
-
 logos.forEach((logo) => {
     logo.addEventListener('mouseover', () => {
-        logoregs.forEach((logoreg) => {
-            logoreg.style.display = 'none';
-        })
-    logohovers.forEach((logohover) => {
-        logohover.style.display = 'block';
+      logo.querySelector('.logoreg').style.display = 'none';
+      logo.querySelector('.logohover').style.display = 'block';
     });
-});
-
+  
     logo.addEventListener('mouseout', () => {
-        logohovers.forEach((logohover) => {
-            logohover.style.display = 'none';
-        });
-        logoregs.forEach((logoreg) => {
-            logoreg.style.display = 'block';
-        });
-});
+      logo.querySelector('.logoreg').style.display = 'block';
+      logo.querySelector('.logohover').style.display = 'none';
+    });
 });
 
 let headers = document.querySelectorAll('header');
@@ -33,47 +23,68 @@ let techButtons = document.querySelectorAll('.tech-button');
 let QAButtons = document.querySelectorAll('.QA-button');
 let contactsButtons = document.querySelectorAll('.contacts-button')
 
+let about = document.querySelector('.about');
+let how = document.querySelector('.how');
+let tech = document.querySelector('.tech');
+let QA = document.querySelector('.QA');
+let contacts = document.querySelector('.contacts');
+
 for (let aboutButton of aboutButtons){
     aboutButton.onclick = function(){
-        window.scrollTo(0, 768);
+        about.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'});
     }
 }
 
 for (let howButton of howButtons){
     howButton.onclick = function(){
-        window.scrollTo(0, 768*2);
+        how.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'});
     }
 }
 
 for (let techButton of techButtons){
     techButton.onclick = function(){
-        window.scrollTo(0, 768*3);
+        tech.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'});
     }
 }
 
 for (let QAButton of QAButtons){
     QAButton.onclick = function(){
-        window.scrollTo(0, 768*4);
+        QA.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'});
     }
 }
 
 for (let contactsButton of contactsButtons){ 
     contactsButton.onclick = function(){
-        window.scrollTo(0, 768*5);
+        contacts.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'});
     }
 }
 
 let MPScroll = document.querySelector('.main-page-scroll');
 MPScroll.onclick = function(){
-    window.scrollTo(0, 768)
+    about.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'});
 }
 
 let scrollButtons = document.querySelectorAll('.scroll');
-for (let scroll of scrollButtons){
+scrollButtons.forEach((scroll, index) => {
     scroll.onclick = function(){
-        window.scrollTo(0, pageYOffset+768)
+        parts[index+2].scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        });
     }
-}
+})
 
 let switchForward = document.querySelector('.gallery-switch-forward');
 let switchBack = document.querySelector('.gallery-switch-back');
