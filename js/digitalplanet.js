@@ -180,13 +180,45 @@ let sendButtonInOrder = document.querySelector('.submit-order');
 let orderForm = document.querySelector('.order-form');
 let questionsForm = document.querySelector('.questions-form');
 
+function disableAllButtons() {
+    let buttons = page.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.disabled = true;
+      button.classList.add('disabled-element');
+    });
+    let links = page.querySelectorAll('a');
+    links.forEach(link => {
+      link.classList.add('disabled-element');
+      link.setAttribute('data-href', link.getAttribute('href')); 
+      link.removeAttribute('href');
+});
+}
+function enableAllButtons() {
+    let buttons = page.querySelectorAll('button');
+    buttons.forEach(button => {
+      button.disabled = false;
+      button.classList.remove('disabled-element');
+    });
+    let links = document.querySelectorAll('a');
+    links.forEach(link => {
+      let originalHref = link.getAttribute('data-href');
+      if (originalHref) {
+        link.setAttribute('href', originalHref);
+        link.removeAttribute('data-href');
+      }
+      link.classList.remove('disabled-element');
+    });
+}
+
 function openOrder(){
     orderField.style.display = 'block';
     page.style.filter = 'brightness(0.2)';
+    disableAllButtons();
 };
 function closeOrder(){
     orderField.style.display = 'none';
     page.style.filter = 'none';
+    enableAllButtons();
 };
 
 headerOrderButtons.forEach((headerOrderButton) => {
@@ -203,11 +235,13 @@ let successCloseButton = document.querySelector('.success-close-button')
 function openSuccess(){
     success.style.display = 'block';
     page.style.filter = 'brightness(0.2)';
+    disableAllButtons();
 }
 
 function closeSuccess(){
     success.style.display = 'none';
     page.style.filter = 'none';
+    enableAllButtons();
 }
 
 questionsForm.onsubmit = function(evt){
@@ -221,4 +255,20 @@ orderForm.onsubmit = function(evt){
 }
 successCloseButton.onclick = closeSuccess;
 successOKButton.onclick = closeSuccess;
+
+let videoButton = document.querySelector('.main-button-video');
+let videoField = document.querySelector('.video');
+let videoCloseButton = document.querySelector('.video-close-button');
+
+videoButton.onclick = function(){
+    videoField.style.display = 'flex';
+    page.style.filter = 'brightness(0.2)';
+    disableAllButtons();
+}
+
+videoCloseButton.onclick = function(){
+    videoField.style.display = 'none';
+    page.style.filter = 'none';
+    enableAllButtons();
+}
 

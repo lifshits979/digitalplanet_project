@@ -2,16 +2,22 @@ body{
     margin: 0;
     padding: 0;
     font-family: "Ubuntu";
-    justify-self: center;
-    background-image: url(../img/istockphoto-1354982067-612x612.jpg);
-    background-attachment: fixed;
-    width: 99vw;
+    /*justify-self: center;*/
+    min-height: 100%;
+    height: 100%;
+    /*background-image: url(../img/istockphoto-1354982067-612x612.jpg);
+    background-attachment: fixed;*/
+    /*width: 99vw;*/
 }
 
 .page{
     margin: 0 auto;
     padding: 0;    
     width: 1366px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
 button{
@@ -27,6 +33,12 @@ input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus{
     outline: none; 
     box-shadow: inset 0 0 0 2px #0DD1A2;
 }
+
+.disabled-element{
+    pointer-events: none;          
+    cursor: default;   
+    text-decoration: none; 
+} 
 
 h2{
     margin: 0;
@@ -64,9 +76,9 @@ h4{
 }
 
 .part{
-    height: 100vh;
-    max-height: 768px;
-    min-height: 738px;
+    /*height: 100vh;
+    /*max-height: 768px;
+    min-height: 738px;*/
 }
 
 /*header*/
@@ -194,18 +206,16 @@ footer{
     padding-bottom: 30px;
 }
 
-footer:last-child{
-    padding-bottom: 0;
-}
 
 .scroll{
     margin: 0;
     padding: 0;
+    margin-left: 586px;
     background: none;  
     border: none;
     display: flex;
-    justify-self: center;
-    justify-items: center;
+    /*justify-self: center;
+    justify-items: center;*/
     width: 15px;
     height: 7px;
 }
@@ -378,19 +388,55 @@ footer:last-child{
     opacity: 1;
 }
 
+.video{
+    margin: 0;
+    padding: 0;
+    padding-bottom: 48px;
+    border-radius: 3%;
+    background-color: #F3F3F3;
+    height: 480px;
+    width: 816px;
+    position: fixed;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+
+.video-close-button{
+    margin: 0;
+    margin-left: 768px;
+    padding: 17px;
+    width: 48px;
+    height: 48px;
+    border: none;
+    background: none;
+}
+
 /*main-page*/
 .main-page {
     margin: 0;
     padding: 0;
     display: block;
-    background-image: url("../img/kid_VR.png"), url("../img/bg.jpg");
-    background-repeat: no-repeat, no-repeat;
-    background-position: right bottom, 0px 0px;
+    background-image: url("../img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
 }
 
 /*main*/
 .main-main-page {
     margin-left: 120px;
+}
+
+.kid_VR-pic {
+    position: absolute;
+    margin-left: 936px;
+    margin-top: 418px;
 }
 
 h1 {
@@ -514,12 +560,13 @@ h1 {
 .main-page-scroll{
     margin: 0;
     margin-top: -30px;
+    margin-left: 538px;
     padding: 0;
     background: none;  
     border: none;
     display: grid;
-    justify-self: center;
-    justify-items: center;
+    /*justify-self: center;
+    justify-items: center;*/
     font-size: 11px;
     text-transform: uppercase;
     text-decoration: none;
@@ -537,20 +584,15 @@ h1 {
 }
 
 .main-page-scroll img{
-    margin-top: 3px;
+    margin: 0;
+    padding: 0;
+    margin-top: 5px;
+    margin-left: 137px;
 }
 
 .main-page-scroll:hover{
     opacity: 1;
 }
-
-.main-page-scroll-img{
-    margin: 0;
-    padding: 0;
-    margin-top: 5px;
-}
-
-
 
 /*about*/
 .about-flex{
