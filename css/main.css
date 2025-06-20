@@ -45,7 +45,6 @@ h2{
     text-decoration: underline 3px solid #0DD1A2;
     text-underline-offset: 14px;
     text-wrap: wrap;
-
 }
 
 h3{
@@ -65,9 +64,11 @@ h4{
     background-repeat: no-repeat, no-repeat;
     background-position: right bottom, 0 0;
     background-size: auto,cover;
+    background-attachment: fixed;
     display: flex;
     justify-content: center; 
     align-items: center;
+    height: 100vh;
 }
 
 .bg-2{
@@ -96,7 +97,6 @@ h4{
 .part{
     box-sizing: border-box;
     min-height: 730px;
-    /*height: 100vh;*/
 }
 
 .underline{
@@ -109,14 +109,15 @@ header {
     padding-top: 43px;
     display: flex;
     align-items: center;
+    justify-self: center;
     height: 72px;
     position: fixed;
     z-index: 3;
-    margin: 0 auto;
-    max-width: 1366px; 
+    margin: 0 auto; 
     left: 0;
     right: 0;
     box-sizing: border-box;
+    background-attachment: fixed;
 }
 
 .logo {
@@ -147,7 +148,7 @@ header {
 
 .page-list {
     margin: 0;
-    margin-left: 80px;
+    margin-left: 5.85vw;
     padding: 0;
     display: flex;
     justify-content: space-between;
@@ -156,13 +157,13 @@ header {
 }
 
 .page-title {
-    margin: 0 16px;
+    margin: 0 1.17vw;
     font-size: 15px;
 }
 
 .page-title:nth-child(1){
     margin-left: 0;
-    margin-right: 17px;
+    margin-right: 1.24vw;
 }
 
 .page-title:last-child{
@@ -185,6 +186,10 @@ header {
     color:#0DD1A2;
 }
 
+.page-title-button.active {
+    color:#0DD1A2;
+}
+
 .active-title{
     color:#0DD1A2;
 }
@@ -194,13 +199,14 @@ header {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    width: 107px;
+    width: 7.83vw;
+    max-width: 107px;
     height: 34px;
     margin: 0;
-    margin-left: 91px;
+    margin-left: 6.66vw;
     border: 2px solid #0DD1A2;
     background: none;
-    border-radius: 2%; /*?????*/
+    border-radius: 2%; 
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
@@ -213,7 +219,7 @@ header {
 }
 
 .telephone {
-    margin-left: 20px;
+    margin-left: 1.46vw;
     text-transform: uppercase;
     text-decoration: none;
     font-size: 16px;
@@ -232,11 +238,6 @@ footer{
     padding: 0;
     padding-bottom: 30px;
 }
-
-footer:last-child{
-    padding-bottom: 20px;
-}
-
 
 .scroll{
     margin: 0 auto;
@@ -796,28 +797,24 @@ h1 {
     padding: 0;
     display: flex;
     width: 215px;
-    position: relative;
 }
 
-.action-rectangle{
-    position: absolute;
+.action-photo::after{
+    content: "";
     display: block;
     box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    margin-left: 20px;
     width: 195px;
     height: 130px;
+    margin-left: -183px;
     border:2px solid #0DD1A2;
     background: none;
     z-index: 1;
 }
 
 .action-img{
-    position: absolute;
     margin:0;
-    margin-left: 8px;
     margin-top: 12px;
+    margin-left: -32px;
     padding: 0;
     display: block;
     width: 195px;
@@ -834,6 +831,7 @@ h1 {
     background: white;
     width: 40px;
     height: 40px;
+    aspect-ratio: 1/1;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
@@ -841,8 +839,9 @@ h1 {
 }
 
 .action-number p{
+    margin: 0;
     font-size: 28px;
-    font-style: bold;
+    font-weight: bold;
     color: #0DD1A2;
 }
 
@@ -850,7 +849,7 @@ h1 {
     margin: 0;
     padding: 0;
     margin-top: 10px;
-    margin-left: 195px;
+    margin-left: 20px;
 }
 
 .action-title{
@@ -942,6 +941,7 @@ h1 {
 
 .tech-description-piece-2 p{
     margin-top: 13px;
+    height: 194px;
 }
 
 .tech-description-piece-3 p{
@@ -952,12 +952,22 @@ h1 {
     margin-top: 10px;
 }
 
+.tech-description-piece-1{
+    height: 155px;
+}
+
+.tech-description-piece-2{
+    height: 194px;
+}
+
 .tech-description-piece-3{
     margin-top: 41px;
+    height: 155px;
 }
 
 .tech-description-piece-4{
     margin-top: 60px;
+    height: 136px;
 }
 
 .tech-footer{
@@ -1364,18 +1374,20 @@ h5{
     }
 
     .bg-1{
-        background-image: url("../img/bg.jpg");
+        background-image: url("../img/bg1.jpg");
         background-repeat: no-repeat;
         background-position:  center center;
-        background-size: auto;
+        background-size: 250% 100%;
         padding: 0 16px;
     }
 
     .bg-2{
         padding: 0 16px;
-        background: linear-gradient(to bottom, rgba(28, 28, 28, 0) 50%, #1C1C1C 100%),
-        url("../img/Rectangle.jpg") no-repeat top, #1C1C1C;
-        background-size:auto;
+        background:
+        linear-gradient(to bottom, rgba(0, 0, 0, 0) 1%, #1C1C1C 12%),
+        url("../img/2700.jpg") no-repeat top center;
+        background-size: auto, 150% 12%;
+        background-position: center top;
         background-attachment:scroll;
     }
 
@@ -1524,6 +1536,7 @@ h5{
 
     .mobile-menu{
         position:absolute;
+        flex-direction: column;
         background-color: #1C1C1C;
         width: 100vw;
         height: 100vh;
@@ -1578,9 +1591,18 @@ h5{
         height: 9.3vh;
     }
 
+    .menu-underline{
+        margin-top: 8.8vh;
+        opacity: 0.24;
+        background: white;
+        height: 1px;
+        width: -webkit-fill-available;
+        border:none;
+    }
+
     .menu-telephone{
         display: block;
-        margin-top: 11vh;
+        margin-top: auto;
         margin-left: 24px;
         text-transform: uppercase;
         text-decoration: none;
@@ -1591,7 +1613,8 @@ h5{
     }
 
     .menu-social-networks{
-        margin-top: 20px;
+        margin-top: 3.5vh;
+        margin-bottom: 3.5vh;
         display: flex;
         margin-left: 16px;
     }
@@ -1600,6 +1623,8 @@ h5{
         padding-top: 56px;
         min-width: 0;
         height: 100vh;
+        display: flex;
+        flex-direction: column;
     }
 
     .container{
@@ -1626,6 +1651,7 @@ h5{
         justify-content:space-between;
         height: 56px;
         min-width: 0;
+        width: 100%;
     }
 
     .page-list{
@@ -1637,6 +1663,7 @@ h5{
     }
 
     .logo{
+        margin: 0;
         margin-top: 2px;
     }
 
@@ -1646,6 +1673,7 @@ h5{
 
     .header-order{
         margin:0;
+        width: 107px;
     }
 
     .menu{
@@ -1718,7 +1746,8 @@ h5{
     }
 
     .main-page-footer{
-        margin-top: 10.3vh;
+        margin-top: auto;
+        padding-bottom: 3.5vh;
         display: flex;
         justify-content: center;
     }
@@ -1840,11 +1869,9 @@ h5{
     }
 
     .how-sequence{
-        margin: 0 32px;
+        margin: 0 11px;
         display: flex;
         flex-direction: column;
-        justify-self: center;
-        justify-content: center;
         list-style: none;
     }
 
@@ -1853,28 +1880,33 @@ h5{
     }
 
     .action-photo{
-        margin: 0 auto;
+        margin: 0 20px;
         margin-top: 56px;
+        width: fit-content;
+        height: auto;
+    }
+
+    .action-photo::after{
+        margin-left: -85%;
+        margin-bottom: 6%;
         width: 100%;
-        aspect-ratio: 215 / 150;
+        max-width: 90.7%;
+        height: auto;
     }
 
     .action-number{
-        margin-top: 60%;
+        margin-top: auto;
+        margin-bottom: -3%;
     }
 
     .action-img{
         width: 100%;
+        max-width: 90.7%;
+        margin-left: -8%;
         height: auto;
         aspect-ratio: 195 / 130;
-        object-fit: cover;
     }
 
-    .action-rectangle{
-        width: 100%;
-        height: auto;
-        aspect-ratio: 195/130;
-    }
 
     .action-caption{
         margin: 0;

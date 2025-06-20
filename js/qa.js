@@ -18,7 +18,9 @@ answerButtons.forEach((answerButton, index) => {
             let answerHeight = answers[index].clientHeight;
             QAFooter.style.marginTop = 187 - answerHeight + 'px';
             openSymbols[index].style.transform = 'rotate(45deg)';
-            openSymbols[index].style.marginLeft = 3 + 'px';
+            if (window.matchMedia("(max-width: 768px)").matches) {
+                openSymbols[index].style.marginLeft = 3 + 'px';
+              }
         }
         else {answers[index].style.display = 'none';
             answers[index].classList.add('answer-hidden');
