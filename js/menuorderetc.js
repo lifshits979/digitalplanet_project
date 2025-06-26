@@ -38,9 +38,26 @@ function enableAllButtons() {
     document.body.style.overflow = '';
 }
 
+let menuButton = document.querySelector('.menu');
+let mobileMenu = document.querySelector('.mobile-menu');
+let menuCloseButton = document.querySelector('.menu-close-button')
+
+function openMenu(){
+    mobileMenu.style.display = 'flex';
+    page.style.display = 'none'
+}
+
+function closeMenu(){
+    page.style.display = 'block';
+    mobileMenu.style.display = 'none';
+    buttons.forEach(button => button.classList.remove('active'));
+    mainPageButtons.forEach(mainPageButton => mainPageButton.classList.add('active'));
+}
+
 function openOrder(){
-    orderField.style.display = 'block';
+    orderField.style.display = 'flex';
     page.style.filter = 'brightness(0.2)';
+    closeMenu();
     disableAllButtons();
 };
 function closeOrder(){
@@ -61,7 +78,7 @@ let successOKButton = document.querySelector('.success-ok');
 let successCloseButton = document.querySelector('.success-close-button')
 
 function openSuccess(){
-    success.style.display = 'block';
+    success.style.display = 'flex';
     page.style.filter = 'brightness(0.2)';
     disableAllButtons();
 }
@@ -100,18 +117,5 @@ videoCloseButton.onclick = function(){
     enableAllButtons();
 }
 
-let menuButton = document.querySelector('.menu');
-let mobileMenu = document.querySelector('.mobile-menu');
-let menuCloseButton = document.querySelector('.menu-close-button')
-
-menuButton.onclick = function(){
-    mobileMenu.style.display = 'flex';
-    page.style.display = 'none'
-}
-
-menuCloseButton.onclick = function(){
-    page.style.display = 'block';
-    mobileMenu.style.display = 'none';
-    buttons.forEach(button => button.classList.remove('active'));
-    mainPageButtons.forEach(mainPageButton => mainPageButton.classList.add('active'));
-}
+menuButton.onclick = openMenu;
+menuCloseButton.onclick = closeMenu;

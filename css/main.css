@@ -1405,6 +1405,13 @@ h5{
         top: 0; 
         left: 0; 
         transform:none;
+        flex-direction: column;
+    }
+
+    .container-order{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
     }
 
     .success{    
@@ -1416,6 +1423,13 @@ h5{
         top: 0; 
         left: 0; 
         transform:none;
+        flex-direction: column;
+    }
+
+    .container-success{
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
     }
 
     .video{
@@ -1450,7 +1464,6 @@ h5{
     .order h4{
         width: fit-content;
         margin: 0 auto;
-        margin-top: 15.8vh;
     }
 
     .order p{
@@ -1490,7 +1503,6 @@ h5{
     .success-img{
         display: block;
         margin: 0 auto;
-        margin-top: 15.8vh;
     }
 
     .success h4{
@@ -1528,10 +1540,11 @@ h5{
     }
 
     .video video{
-        margin: 0 auto;
-        margin-top: 15.8vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         width: 90%;
-        aspect-ratio: 770/432;
     }
 
     .mobile-menu{
