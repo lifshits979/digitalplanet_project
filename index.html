@@ -52,7 +52,7 @@
     </section>
     <section class="video">
         <button class="video-close-button"><img src="img/cross.svg"></button>
-        <video width="770" height="432" controls> 
+        <video width="770" height="432" preload="none" controls> 
             <source src="img/215697_tiny.mp4" type="video/mp4">
         </video>
     </section>
@@ -103,19 +103,15 @@
                 <li class="page-title">
                     <button class="page-title-button about-button">О продукте</button>
                 </li>
-                <li>•</li>
                 <li class="page-title">
                     <button class="page-title-button how-button">Как работает</button>
                 </li>
-                <li>•</li>
                 <li class="page-title">
                     <button class="page-title-button tech-button">Технология</button>
                 </li>
-                <li>•</li>
                 <li class="page-title">
                     <button class="page-title-button QA-button">Вопросы</button>
                 </li>
-                <li>•</li>
                 <li class="page-title">
                     <button class="page-title-button contacts-button">Контакты</button>
                 </li>                
@@ -166,16 +162,14 @@
                         За счёт реалистичности  и имитации игры такое обучение повышает мотивацию и стимулирует активную мозговую деятельность ребёнка. </p>
                     <div class="about-gallery-section">
                         <article class="about-gallery">
-                            <div class="gallery-rectangle"></div>
                             <ul class="gallery">
-                                <li class="gallery-image gallery-shown"><img src="img/astronaut.jpg" height="300" width="561.82"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic1.jpg" height="300" width="561.82"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic2.jpg" height="300" width="561.82"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic3.jpg" height="300" width="561.82"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic4.jpg" height="300" width="561.82"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic5.jpg" height="300" width="561.82"></li>
+                                <li class="gallery-image gallery-shown"><img src="img/astronaut.jpg" height="300" width="561.82" loading="lazy"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic1.jpg" height="300" width="561.82" loading="lazy"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic2.jpg" height="300" width="561.82" loading="lazy"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic3.jpg" height="300" width="561.82" loading="lazy"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic4.jpg" height="300" width="561.82" loading="lazy"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic5.jpg" height="300" width="561.82" loading="lazy"></li>
                             </ul>
-                            <h3 class="about-gallery-title"> Что показываем в планетарии</h3>
                         </article>
                         <article class = "switch-buttons gallery-buttons">
                             <p>&nbsp</p><p class="switch-count switch-count-gallery">01 /</p><p class="switch-count-all">&nbsp06</p>
@@ -208,7 +202,7 @@
                         <div class="action-number">
                             <p>1</p>
                         </div>
-                        <img class="action-img" src="img/action-1.jpg" width="195" height="130">
+                        <img class="action-img" src="img/action-1.jpg" width="195" height="130" loading="lazy">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Готовим
@@ -221,7 +215,7 @@
                         <div class="action-number">
                             <p>2</p>
                         </div>
-                        <img class="action-img" src="img/action-2.jpg" width="195" height="130">
+                        <img class="action-img" src="img/action-2.jpg" width="195" height="130" loading="lazy">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Выбираем фильм</h4>
@@ -233,7 +227,7 @@
                         <div class="action-number">
                             <p>3</p>
                         </div>
-                        <img class="action-img" src="img/action-3.jpg" width="195" height="130">
+                        <img class="action-img" src="img/action-3.jpg" width="195" height="130" loading="lazy">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Надеваем VR-очки</h4>
@@ -245,7 +239,7 @@
                         <div class="action-number">
                             <p>4</p>
                         </div>
-                        <img class="action-img" src="img/action-4.jpg" width="195" height="130">
+                        <img class="action-img" src="img/action-4.jpg" width="195" height="130" loading="lazy">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Исследуем галактики!</h4>
@@ -324,43 +318,31 @@
             <hr class="underline">
             <ul class="questions">
                 <li class="question">
-                    <div class="question-bar">
-                        <p class="dot">•</p>
                         <div class="question-bar-content">
                             <h5>Сколько длится сеанс? Дети не устают во время просмотра?</h5>
                             <button class="plus-pic"><p>+</p></button>
                         </div>
-                    </div>
                     <p class="answer answer-hidden">пупупу</p>
                 </li>
                 <li class="question">
-                    <div class="question-bar">
-                        <p class="dot">•</p>
                         <div class="question-bar-content">
                             <h5>Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</h5>
                             <button class="plus-pic"><p>+</p></button>
                         </div>
-                    </div>
                     <p class="answer answer-hidden">VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения и опыта использования аналогичных продуктов мог безопасно и легко пользоваться этой технологией. У нас есть сертификат качества продукции и лицензия для её использования на территории РФ. Для людей с зрением, отличным от идеального, на VR-очках предусмотрена регулировка диоптрий.</p>
                 </li>
                 <li class="question">
-                    <div class="question-bar">
-                        <p class="dot">•</p>
                         <div class="question-bar-content">
                             <h5>Действительно ли это образовательный метод, или это лишь игрушка?</h5>
                             <button class="plus-pic"><p>+</p></button>
                         </div>
-                    </div>
                     <p class="answer answer-hidden">пупупу</p>
                 </li>
                 <li class="question">
-                    <div class="question-bar">
-                        <p class="dot">•</p>
                         <div class="question-bar-content">
                             <h5>Всё понятно! Хочу заказать выезд VR планетария, что нужно сделать?</h5>
                             <button class="plus-pic"><p>+</p></button>
                         </div>
-                    </div>
                     <p class="answer answer-hidden">пупупу</p>
                 </li>
             </ul>
@@ -437,9 +419,6 @@
     </section>
     </section>
     </section>
-    <script src="js/scrolling.js"></script>
     <script src="js/menuorderetc.js"></script>
-    <script src="js/blockswitcher.js"></script>
-    <script src="js/qa.js"></script>
     </body>
 </html>

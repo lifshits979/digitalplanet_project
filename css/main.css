@@ -35,8 +35,7 @@ input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus, te
 } 
 
 h2{
-    margin: 0;
-    padding: 0;   
+    margin: 0; 
     padding-top: 76px;
     white-space: nowrap;
     font-size: 44px;
@@ -45,12 +44,6 @@ h2{
     text-decoration: underline 3px solid #0DD1A2;
     text-underline-offset: 14px;
     text-wrap: wrap;
-}
-
-h3{
-    font-size: 24px;
-    color:#FFFFFF;
-    font-weight: 500;    
 }
 
 h4{
@@ -151,23 +144,30 @@ header {
     margin-left: 5.85vw;
     padding: 0;
     display: flex;
-    justify-content: space-between;
     list-style: none;
     color: #B0ACAC;
 }
 
 .page-title {
-    margin: 0 1.17vw;
-    font-size: 15px;
+    display: flex;
+    margin-right: 1.17vw;
 }
 
 .page-title:nth-child(1){
-    margin-left: 0;
     margin-right: 1.24vw;
 }
 
 .page-title:last-child{
     margin-right: 0;
+}
+
+.page-title::after {
+    content: "•";
+    margin-left: 1.17vw;
+}
+
+.page-title:last-child::after{
+    display: none;
 }
 
 .page-title-button{
@@ -264,8 +264,6 @@ footer{
 }
 
 .order{
-    margin: 0;
-    padding: 0;
     width: 560px;
     height: 380px;
     background-color: #F3F3F3;
@@ -305,6 +303,12 @@ footer{
     margin-top: 13px;
     width: 400px;
     text-align: center;
+}
+
+.container-order{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 .order-input-name{
@@ -372,6 +376,12 @@ footer{
     top: 50%; 
     left: 50%; 
     transform: translate(-50%, -50%);
+}
+
+.container-success{
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
 }
 
 .success-img{
@@ -464,8 +474,6 @@ footer{
 h1 {
     margin: 0;
     margin-top: 153px;
-
-    padding: 0;
     font-size: 96px;
     font-weight: normal;
     color: #FFFFFF;
@@ -474,7 +482,6 @@ h1 {
 
 .main-description {
     margin: 0;
-    padding: 0;
     color: #FFFFFF;
     font-size: 17px;
     line-height: 150%;
@@ -530,7 +537,6 @@ h1 {
 /*footer*/
 
 .main-page-footer{
-
     margin-top: 154px;
 }
 
@@ -603,7 +609,6 @@ h1 {
 
 .main-page-scroll img{
     margin: 0 auto;
-    padding: 0;
     margin-top: 5px;
 }
 
@@ -617,16 +622,12 @@ h1 {
 }
 
 .about-flex{
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
 .about-description{
-    margin: 0;
     margin-top: 57px;
     margin-left: 30px;
-    padding: 0;
     width: 440px;
     color:#FFFFFF;
     font-weight: 300;
@@ -634,40 +635,32 @@ h1 {
     line-height: 150%;
 }
 
-.about-gallery-section{
-    margin: 0;
-    padding: 0;
-}
-
 .about-gallery{
-    margin: 0;
-    padding: 0;
-    margin-left: -115px;
-    margin-top: 154px;  
+    margin-left: 136px;
+    margin-top: 169px;  
     display: flex;  
 }
 
-.about-gallery-title{
-    margin: 0;
-    padding: 0;
+.about-gallery::after{
+    content: "Что показываем в планетарии";
+    font-size: 24px;
+    color:#FFFFFF;
+    font-weight: 500; 
     margin-top: 229px;
     margin-left: -721.82px;
-    display: block;
     width: 192px;
     text-align: right;
+    z-index: 2;
 }
 
 .gallery{
     margin: 0;
-    margin-top: 15px;
-    margin-left: -577px; 
     padding: 0;
     list-style: none;
+    z-index: 1;
 }
 
 .gallery-image img{
-    margin: 0;
-    padding: 0;
     height: 300px;
     width: 561.82px;  
     display: block;
@@ -682,22 +675,22 @@ h1 {
     display: block;
 }
 
-.gallery-rectangle{
-    margin: 0;
-    padding: 0;
-    margin-left: 172.872px;
+.gallery::before{
+    content: "";
+    margin-left: 12.872px;
+    margin-top: -15px;
     display: block;
     box-sizing: border-box;
     width: 564.13px; 
     height: 280.38px;
     background: none;
-    border: 4px solid #0DD1A2
+    border: 4px solid #0DD1A2;
+    position: absolute;
+    z-index: -1;
 }
 
-.switch-buttons{
-    margin: 0;    
-    margin-left: 405px;
-    padding: 0;
+.switch-buttons{  
+    margin-left: 496px;
     display: flex;
     justify-content: end;
     height: 48px;
@@ -705,8 +698,6 @@ h1 {
 }
 
 .switch{
-    margin: 0;
-    padding: 0;
     background-color: black;
     border: none;
     width: 60px;
@@ -736,17 +727,13 @@ h1 {
 }
 
 .switch-count{
-    margin: 0;
-    padding: 0;
     font-size: 18px;
     color:#FFFFFF;
     align-self: center;
 }
 
 .switch-count-all{
-    margin: 0;
     margin-right: 21px;
-    padding: 0;
     font-size: 18px;
     color:#ABABAB;
     align-self: center;
@@ -762,7 +749,6 @@ h1 {
 }
 
 .how-sequence{
-    margin: 0;
     margin-left: 30px;
     margin-top: 55px;
     padding: 0;
@@ -772,8 +758,6 @@ h1 {
 }
 
 .how-action{
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
@@ -793,8 +777,6 @@ h1 {
 }
 
 .action-photo{
-    margin: 0;
-    padding: 0;
     display: flex;
     width: 215px;
 }
@@ -812,10 +794,8 @@ h1 {
 }
 
 .action-img{
-    margin:0;
     margin-top: 12px;
     margin-left: -32px;
-    padding: 0;
     display: block;
     width: 195px;
     height: 130px;
@@ -825,13 +805,10 @@ h1 {
 
 .action-number{
     display: flex;
-    margin: 0;
     margin-top: 110px;
-    padding: 0;
     background: white;
     width: 40px;
     height: 40px;
-    aspect-ratio: 1/1;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
@@ -839,22 +816,18 @@ h1 {
 }
 
 .action-number p{
-    margin: 0;
     font-size: 28px;
     font-weight: bold;
     color: #0DD1A2;
 }
 
 .action-caption{
-    margin: 0;
-    padding: 0;
     margin-top: 10px;
     margin-left: 20px;
 }
 
 .action-title{
     margin: 0;
-    padding: 0;
     display: block;
     width: 120px;
 }
@@ -862,7 +835,6 @@ h1 {
 .action-caption-text{
     margin: 0;
     margin-top: 10px;
-    padding: 0;
     display: block;
     width: 300px;
     color: white;
@@ -884,7 +856,7 @@ h1 {
 }
 
 .path-3{
-    margin-left: 399px; /*???????????*/
+    margin-left: 399px; 
     padding-block-start: 457px;
     position: absolute
 }
@@ -903,7 +875,6 @@ h1 {
 }
 
 .tech-description{
-    margin: 0;
     margin-top: 79px;
     margin-left: 28px;
     padding: 0;
@@ -915,20 +886,15 @@ h1 {
 }
 
 .tech-description-piece{
-    margin: 0;
-    padding: 0;
     display: block;
 }
 
 .tech-description-piece h4{
     line-height: 132.1%;
     margin: 0;
-    padding: 0;
 }
 
 .tech-description-piece p{
-    margin: 0;
-    padding: 0;
     color:#FFFFFF;
     font-size: 15px;
     line-height: 130%;
@@ -975,8 +941,6 @@ h1 {
 }
 
 .ellipse{
-    margin: 0;
-    padding: 0;
     display:flex;
     margin-left: 353px;
     padding-block-start: 195px;
@@ -984,9 +948,7 @@ h1 {
 }
 
 .VR-glasses{
-    margin: 0;
     margin-top: 104.5px;
-    padding: 0;
     position: absolute;
     margin-left: 11px;
 }
@@ -998,10 +960,8 @@ h1 {
 .magnifier{
     width: 85px;
     height: 85px;
-    margin: 0;
     margin-left:-118.777px;
     margin-top: 303px;
-    padding: 0;
     background-color: #15B28D;
     border-radius: 100%;
     border: none
@@ -1059,7 +1019,6 @@ h1 {
 }
 
 .questions{
-    margin: 0;
     padding: 0;
     margin-top: 40px;
     margin-left: 1px;
@@ -1073,50 +1032,41 @@ h1 {
     background-color: #FFFFFF;
 }
 
-.question-bar{
-    display: flex;
-}
-
 .question-bar-content{
-    margin: 0;
-    margin-left: 10px;
-    padding: 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     height: 72px;
-    list-style: inside;
-    width: 865px;
+    list-style: none;
+    width: 100%;
 }
 
 .question:nth-child(1){
     margin-top: 0;
 }
 
-.dot{
-    margin: 0;
+.question-bar-content::before{
+    content:"•";
     margin-left: 20px;
-    margin-top: 18px;
-    padding: 0;
-    width: 9px;
     color: #0DD1A2;
     font-size: 24px;
     font-weight: 700;
-    line-height: 132.1%;
+    position: absolute;
 }
 
 h5{
-    margin: 0;
+    margin-left: 45px;
     opacity: 0.8;
     font-size: 21px;
     font-weight: 500;
     line-height: 132.1%;
-    padding-top: 20px;
 }
 
 .plus-pic{
     padding: 0;
     background-color: #15B28D;
     width: 72px;
+    height: -webkit-fill-available;
     border: none;
     color:#FFFFFF;
     display: flex;
@@ -1125,7 +1075,6 @@ h5{
 
 .plus-pic p{
     margin: 0;
-    padding: 0;
     font-size: 48px;
     line-height: 132.1%;
     font-weight: 300;
@@ -1137,9 +1086,8 @@ h5{
 
 .answer{
     margin: 0;
-    padding: 0;
     padding-left: 50px;
-    padding-top: -3px;
+    margin-top: -3px;
     padding-bottom: 29px; 
     font-size: 15px;
     display: none;
@@ -1158,8 +1106,6 @@ h5{
 }
 
 .contacts-article{
-    margin: 0;
-    padding: 0;
     margin-top: 58px;
     margin-left: 30px;
     display: flex;
@@ -1211,8 +1157,6 @@ h5{
 }
 
 .more-questions{
-    margin: 0;
-    padding: 0;
     margin-left: 60px;
 }
 
@@ -1231,15 +1175,11 @@ h5{
 
 .more-questions-top{
     display: flex;
-    margin: 0;
-    padding: 0;
 }
 
 .input-name{
     display: block;
-    margin: 0;
     margin-top: 12px;
-    padding: 0;
     padding-top: 15px;
     padding-bottom: 14px;
     padding-left: 15px;
@@ -1252,10 +1192,8 @@ h5{
 
 .input-email{
     display: block;
-    margin: 0;
     margin-top: 12px;
     margin-left: 10px;
-    padding: 0;
     padding-top: 15px;
     padding-bottom: 14px;
     padding-left: 15px;
@@ -1269,9 +1207,7 @@ h5{
 .input-text{
     display: block;
     border: none;
-    margin: 0;
     margin-top: 10px;
-    padding: 0;
     padding-top: 15px;
     padding-bottom: 112px;
     padding-left: 15px;
@@ -1286,10 +1222,7 @@ h5{
 }
 
 .submit-question{
-    display: block;
     cursor: pointer;
-    margin: 0;
-    padding: 0;
     margin-top: 20px;
     display:flex;
     align-items: center;
@@ -1408,12 +1341,6 @@ h5{
         flex-direction: column;
     }
 
-    .container-order{
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
-    }
-
     .success{    
         padding: 0;
         width: 100vw;
@@ -1424,12 +1351,6 @@ h5{
         left: 0; 
         transform:none;
         flex-direction: column;
-    }
-
-    .container-success{
-        position: absolute;
-        top: 50%;
-        transform: translate(0, -50%);
     }
 
     .video{
@@ -1799,9 +1720,9 @@ h5{
         flex-direction:column-reverse;
     }
     
-    .about-gallery-title{
-        margin: 0;
+    .about-gallery::after{
         margin-top: 50px;
+        margin-left: 0;
         text-align: left;
         width: auto
     }
@@ -1822,7 +1743,7 @@ h5{
         object-fit: cover;
     }
     
-    .gallery-rectangle{
+    .gallery::before{
         display: none;
     }
 
@@ -2062,10 +1983,6 @@ h5{
         padding-top: 90px
     }
 
-    .dot{
-        display: none;
-    }
-
     .questions{
         margin: 0;
         margin-left: -8px;
@@ -2080,10 +1997,15 @@ h5{
         height: auto;
         flex: 256px 32px;
     }
+
+    .question-bar-content::before{
+        display: none;
+    }
     
     .plus-pic{
         min-width: 32px;
         max-width: 32px;
+        align-items: center;
     }
 
     .plus-pic p{
@@ -2102,8 +2024,7 @@ h5{
     h5{
         font-size: 17px;
         padding-top: 10px;
-        margin-left: 5px;
-        margin-right: 5px;
+        margin: 5px 10px;
         padding-bottom: 10px;
         height: auto;
     }
@@ -2171,6 +2092,4 @@ h5{
         margin-left: -4px;
         margin-top: 20px;
     }
-
-
 }
