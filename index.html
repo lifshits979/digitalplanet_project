@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Digital Planet — VR планетарий в Новороссийске.">
         <link href="css/main.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,27 +12,25 @@
     </head>
     <body>
     <section class="order">
-        <button class="order-close-button close-button"><img src="img/cross.svg"></button>
+        <button class="order-close-button close-button" aria-label="Закрыть меню заказа"><img src="img/cross.svg" alt="X"></button>
         <div class="container-order">
         <h4>Закажите VR планетарий</h4>
-        <p>Оставьте ваши контактные данные, мы обработаем заявку в течении двух рабочих дней и перезвоним вам.</p>
+        <p>Оставьте ваши контактные данные, мы обработаем заявку в течение двух рабочих дней и перезвоним вам.</p>
         <form class="order-form">
             <input
                 type="text"
                 id="orderusname" 
                 name="order-user-name" 
                 placeholder="Ваше имя"
-                class="order-input-name"
+                class="order-input order-input-name"
                 required>
-            <span class="error" id="nameError">Неверный ввод</span>
             <input
                 type="tel"
                 id="orderustel" 
                 name="order-user-tel" 
                 placeholder="Ваш телефон"
-                class="order-input-tel"
+                class="order-input order-input-tel"
                 required>
-            <span class="error" id="telError"></span>
             <input
                 type="submit"
                 id="suborder"
@@ -41,17 +40,17 @@
         </form>
         </div>
     </section>
-    <section class="success">
-        <button class="success-close-button close-button"><img src="img/cross.svg"></button>
-        <div class="container-success">
-        <img class="success-img" src="img/Success.png" width="60" height="60">
+    <section class="success order">
+        <button class="success-close-button close-button" aria-label="Закрыть всплыв.окно"><img src="img/cross.svg" alt="X"></button>
+        <div class="container-order">
+        <img class="success-img" src="img/Success.png" width="60" height="60" alt="Успех">
         <h4>Сообщение успешно отправлено!</h4>
         <p>Мы обязательно свяжемся с вами в ближайшее время и подробно ответим на ваш вопрос, будьте на связи!</p>
-        <button class="success-ok">ок</button>
+        <button class="success-ok submit-order">ок</button>
         </div>
     </section>
-    <section class="video">
-        <button class="video-close-button"><img src="img/cross.svg"></button>
+    <section class="video order">
+        <button class="close-button video-close-button" aria-label="Закрыть видео"><img src="img/cross.svg" alt="X"></button>
         <video width="770" height="432" preload="none" controls> 
             <source src="img/215697_tiny.mp4" type="video/mp4">
         </video>
@@ -59,13 +58,13 @@
     <section class="mobile-menu">
         <div class="menu-header">
             <a class="logo menu-logo" href="index.html">
-                <img class="logoreg" src="img/logo.svg"> 
-                <img class="logohover" src="img/logo-hover.svg">
+                <img class="logoreg" src="img/logo.svg" alt="Логотип"> 
+                <img class="logohover" src="img/logo-hover.svg" alt="Логотип">
             </a>
             <button class="header-order menu-header-order">Заказать</button>
-            <button class="menu-close-button"><img src="img/cross.svg"></button>
+            <button class="close-button menu-close-button" aria-label="Закрыть меню"><img src="img/cross.svg" alt="X"></button>
         </div>
-        <ul class="menu-page-list">
+        <nav class="menu-page-list">
             <li class="page-title">
                 <button class="page-title-button main-page-button active">Главная</button>
             </li>
@@ -84,22 +83,22 @@
             <li class="page-title">
                 <button class="page-title-button contacts-button">Контакты</button>
             </li>                
-        </ul>
+        </nav>
         <hr class="menu-underline">
         <a class="menu-telephone" href="tel:88005553575">8 (800) 555 35 75</a>
         <div class="menu-social-networks">
-            <a class="facebook" href="https://facebook.com"><img src="img/fb.svg" width="11" height="22"></a>
-            <a class="vk" href="https://vk.com"><img src="img/vk.svg" width="28" height="15"></a>
+            <a class="facebook" href="https://facebook.com"><img src="img/fb.svg" width="11" height="22" alt="facebook"></a>
+            <a class="vk" href="https://vk.com"><img src="img/vk.svg" width="28" height="15" alt="vk"></a>
         </div>
     </section>       
-    <section class="page">
+    <main class="page">
         <header>
             <a class="logo" href="index.html">
-                <img class="logoreg" src="img/logo.svg"> 
-                <img class="logohover" src="img/logo-hover.svg">
+                <img class="logoreg" src="img/logo.svg" alt="Логотип"> 
+                <img class="logohover" src="img/logo-hover.svg" alt="Логотип">
                 <p>Digital Planet</p>
             </a>
-            <ul class="page-list">
+            <nav class="page-list">
                 <li class="page-title">
                     <button class="page-title-button about-button">О продукте</button>
                 </li>
@@ -115,45 +114,44 @@
                 <li class="page-title">
                     <button class="page-title-button contacts-button">Контакты</button>
                 </li>                
-            </ul>
+            </nav>
             <button class="header-order">Заказать</button>
             <a class="telephone" href="tel:88005553575">8 (800) 555 35 75</a>
-            <button class="menu">
-                <img src="img/menu.svg">
+            <button class="menu" aria-label="Меню">
+                <img src="img/menu.svg" alt="Меню">
+            </button>
         </header> 
     <section class="bg-1">
-    <section class="main-page part">
-        <main class="main-main-page">
+        <section class="main-page part">
             <h1> Digital Planet VR</h1>
             <p class="main-description">Образовательный виртуальный планетарий в Новороссийске.
                 Познавательное приключение в мир звёзд и галактик.</p>
             <div class="main-buttons">
                 <button class="main-button main-button-order">
-                    <img class="main-button-pic" src="img/order-pic.svg">
+                    <img class="main-button-pic" src="img/order-pic.svg" alt="Заказать">
                     <p class="main-button-text">Заказать</p>
                 </button>
                 <button class="main-button main-button-video">
-                    <img class="main-button-pic" src="img/vid-pic.svg">
+                    <img class="main-button-pic" src="img/vid-pic.svg" alt="Видео">
                     <p class="main-button-text">Видео</p>
             </button>
             </div>
-        </main>
-        <footer class="main-page-footer">            
+        </section>
+        <article class="main-page-footer">            
             <div class="social-networks">
-                <a class="facebook" href="https://facebook.com"><img src="img/fb.svg" width="11" height="22"></a>
-                <a class="vk" href="https://vk.com"><img src="img/vk.svg" width="28" height="15"></a>
+                <a class="sn facebook" href="https://facebook.com"><img src="img/fb.svg" width="11" height="22" alt="facebook"></a>
+                <a class="sn vk" href="https://vk.com"><img src="img/vk.svg" width="28" height="15" alt="vk"></a>
             </div>
             <button class="main-page-scroll">
                 <p>Скролл вниз</p> 
-                <img src="img/scroll.svg"> 
+                <img src="img/scroll.svg" alt="Скролл"> 
             </button>
-        </footer>
-    </section>
+        </article>
     </section>
     <section class="bg-2">
     <section class="container">
     <section class="about part">
-        <main class="about-main">
+        <article class="about-main">
             <h2 class="about-title">Что такое VR-планетарий?&nbsp&nbsp</h2>
             <hr class="underline">
             <div class="about-flex">
@@ -161,48 +159,46 @@
                         Зрителям выдаются очки виртуальной реальности, оператор запускает сеанс планетария на всех очках одновременно. В коллекции фильмов идут обучающие картины о космосе, астрономии  и обществознании. <br> <br>
                         За счёт реалистичности  и имитации игры такое обучение повышает мотивацию и стимулирует активную мозговую деятельность ребёнка. </p>
                     <div class="about-gallery-section">
-                        <article class="about-gallery">
+                        <div class="about-gallery">
                             <ul class="gallery">
-                                <li class="gallery-image gallery-shown"><img src="img/astronaut.jpg" height="300" width="561.82" loading="lazy"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic1.jpg" height="300" width="561.82" loading="lazy"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic2.jpg" height="300" width="561.82" loading="lazy"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic3.jpg" height="300" width="561.82" loading="lazy"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic4.jpg" height="300" width="561.82" loading="lazy"></li>
-                                <li class="gallery-image gallery-hidden"><img src="img/pic5.jpg" height="300" width="561.82" loading="lazy"></li>
+                                <li class="gallery-image gallery-shown"><img src="img/astronaut.jpg" alt="Галерея-1"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic1.jpg" loading="lazy" alt="Галерея-2"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic2.jpg" loading="lazy" alt="Галерея-3"> </li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic3.jpg" loading="lazy" alt="Галерея-4"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic4.jpg" loading="lazy" alt="Галерея-5"></li>
+                                <li class="gallery-image gallery-hidden"><img src="img/pic5.jpg" loading="lazy" alt="Галерея-6"></li>
                             </ul>
-                        </article>
-                        <article class = "switch-buttons gallery-buttons">
-                            <p>&nbsp</p><p class="switch-count switch-count-gallery">01 /</p><p class="switch-count-all">&nbsp06</p>
-                            <button class="switch switch-back gallery-switch-back">
-                                <img class="switchbackreg" src="img/switch.svg">
-                                <img class="switchbackhover" src="img/switchhover.svg">
+                        </div>
+                        <div class = "switch-buttons gallery-buttons">
+                            <p class="switch-count switch-count-gallery">01 /</p>
+                            <button class="switch switch-back gallery-switch-back" aria-label="switch">
+                                <img class="switchbackreg" src="img/switch.svg" alt="switch">
+                                <img class="switchbackhover" src="img/switchhover.svg" alt="switch">
                             </button>
-                            <button class="switch switch-forward gallery-switch-forward">
-                                <img class="switchforwardreg" src="img/switch.svg">
-                                <img class="switchforwardhover" src="img/switchhover.svg">
+                            <button class="switch switch-forward gallery-switch-forward" aria-label="switch">
+                                <img class="switchforwardreg" src="img/switch.svg" alt="switch">
+                                <img class="switchforwardhover" src="img/switchhover.svg" alt="switch">
                             </button>
-                        </article>
+                        </div>
                     </div>
                 </div>
-        </main>
-        <footer class="about-footer">            
-            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
-        </footer>
+            </article>
+        <article class="about-footer mid-footer">            
+            <button class="scroll" aria-label="scroll"> <img class="scroll-img" src="img/scroll.svg" alt="scroll"> </button>
+        </article>
     </section>
     <section class="how part">
-        <main class="how-main">
-            <img class="path-1" src="img/paths/1-2.svg">
-            <img class="path-2" src="img/paths/2-3.svg">
-            <img class="path-3" src="img/paths/3-4.svg">
+        <article class="how-main">
             <h2 class="how-title">Как это работает?&nbsp&nbsp</h2>
             <hr class="underline">
+            <img class="path-1 path" src="img/paths/1-2.svg" alt="path">
+            <img class="path-2 path" src="img/paths/2-3.svg" alt="path">
+            <img class="path-3 path" src="img/paths/3-4.svg" alt="path">
             <ul class="how-sequence">
                 <li class = "how-action how-action-1 how-shown">
                     <div class = "action-photo">
-                        <div class="action-number">
-                            <p>1</p>
-                        </div>
-                        <img class="action-img" src="img/action-1.jpg" width="195" height="130" loading="lazy">
+                        <div class="action-number action-number-1"></div>
+                        <img class="action-img" src="img/action-1.jpg" alt="Работа-1">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Готовим
@@ -212,10 +208,8 @@
                 </li>
                 <li class = "how-action how-action-2 how-hidden">
                     <div class = "action-photo">
-                        <div class="action-number">
-                            <p>2</p>
-                        </div>
-                        <img class="action-img" src="img/action-2.jpg" width="195" height="130" loading="lazy">
+                        <div class="action-number action-number-2"></div>
+                        <img class="action-img" src="img/action-2.jpg"  alt="Работа-2">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Выбираем фильм</h4>
@@ -224,10 +218,8 @@
                 </li>
                     <li class = "how-action how-action-3 how-hidden">
                     <div class = "action-photo">
-                        <div class="action-number">
-                            <p>3</p>
-                        </div>
-                        <img class="action-img" src="img/action-3.jpg" width="195" height="130" loading="lazy">
+                        <div class="action-number action-number-3"></div>
+                        <img class="action-img" src="img/action-3.jpg"  alt="Работа-3">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Надеваем VR-очки</h4>
@@ -236,52 +228,53 @@
                 </li>
                 <li class = "how-action how-action-4 how-hidden">
                     <div class = "action-photo">
-                        <div class="action-number">
-                            <p>4</p>
-                        </div>
-                        <img class="action-img" src="img/action-4.jpg" width="195" height="130" loading="lazy">
+                        <div class="action-number action-number-4"></div>
+                        <img class="action-img" src="img/action-4.jpg"  alt="Работа-4">
                     </div>
                     <div class= "action-caption">
                         <h4 class="action-title">Исследуем галактики!</h4>
-                        <p class="action-caption-text">Ребята окунаются в виртуальные миры и с удовольтсием изучают всё вокруг. После показа остаются яркие эмоции и запоминаются важные моменты о планетах, звёздах и галактике.</p>
+                        <p class="action-caption-text">Ребята окунаются в виртуальные миры и с удовольствием изучают всё вокруг. После показа остаются яркие эмоции и запоминаются важные моменты о планетах, звёздах и галактике.</p>
                     </div>
                 </li>
             </ul>
-            <article class = "switch-buttons how-buttons">
-                <p>&nbsp</p><p class="switch-count how-switch-count">01 /</p><p class="switch-count-all">&nbsp04</p>
-                <button class="switch switch-back how-switch-back">
-                    <img class="switchbackreg" src="img/switch.svg">
-                    <img class="switchbackhover" src="img/switchhover.svg">
+            <div class = "switch-buttons how-buttons">
+                <p class="switch-count how-switch-count">01 /</p>
+                <button class="switch switch-back how-switch-back" aria-label="switch">
+                    <img class="switchbackreg" src="img/switch.svg" alt="switch">
+                    <img class="switchbackhover" src="img/switchhover.svg" alt="switch">
                 </button>
-                <button class="switch switch-forward how-switch-forward">
-                    <img class="switchforwardreg" src="img/switch.svg">
-                    <img class="switchforwardhover" src="img/switchhover.svg">
+                <button class="switch switch-forward how-switch-forward" aria-label="switch">
+                    <img class="switchforwardreg" src="img/switch.svg" alt="switch">
+                    <img class="switchforwardhover" src="img/switchhover.svg" alt="switch">
                 </button>
-            </article>
-        </main>
-        <footer class="how-footer">            
-            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
-        </footer> 
+            </div>
+        </article>
+        <article class="how-footer mid-footer">            
+            <button class="scroll" aria-label="scroll"> <img class="scroll-img" src="img/scroll.svg" alt="scroll"> </button>
+        </article> 
     </section>
     <section class="tech part">
-        <main class="tech-main">
-            <img class="ring" src="img/arrows/ring.svg">
-            <div class="ellipse">
-                <img class="ellipse-pic" src="img/Ellipse.png" width="408" height="408">
-                <img class="VR-glasses" src="img/Masters Glass VR-iii.png" width="417" height="214">
-                <img class="dot-on-glasses dotVR-1" src="img/dot.svg">
-                <button class="magnifier"><img src="img/magnifier.svg" width="40" height="40"></button>
-            </div>
-            <img class="arrow-1" src="img/arrows/arrow-1.svg">
-            <img class="arrow-2" src="img/arrows/arrow-2.svg">
-            <img class="arrow-3" src="img/arrows/arrow-3.svg">
-            <img class="arrow-4" src="img/arrows/arrow-4.svg">
+        <article class="tech-main">
             <h2 class="tech-title">VR-технология&nbsp&nbsp</h2>
             <hr class="underline">
+            <img class="arrow-1 arrow" src="img/arrows/arrow-1.svg" alt="Стрела">
+            <img class="arrow-2 arrow" src="img/arrows/arrow-2.svg" alt="Стрела">
+            <img class="arrow-3 arrow" src="img/arrows/arrow-3.svg" alt="Стрела">
+            <img class="arrow-4 arrow" src="img/arrows/arrow-4.svg" alt="Стрела">
+            <div class="ring arrow">
+                <div class="ring-pic"></div>
+            </div>
+             <div class="ellipse">
+                <div class="ellipse-pic">
+                    <img class="VR-glasses" src="img/Masters Glass VR-iii.png" alt="VR-Очки">
+                    <img class="dot-on-glasses dotVR-1" src="img/dot.svg" alt="Точка">
+                    <button class="magnifier" aria-label="Лупа"><img src="img/magnifier.svg" alt="Лупа"></button>
+                </div>
+            </div>
             <ul class="tech-description">
                 <li class="tech-description-piece tech-description-piece-1 tech-description-piece-shown">
                     <h4>Masters Glass VR-iii</h4>
-                    <p>Используем только оригинальные импортные VR-очки. Технологии протестированы и безопасны для глаз. Напряжение во время просмотра — как при прогулке за счёт качественного обёъмного  изображения.</p>
+                    <p>Используем только оригинальные импортные VR-очки. Технологии протестированы и безопасны для глаз. Напряжение во время просмотра — как при прогулке за счёт качественного объёмного  изображения.</p>
                 </li>
                 <li class="tech-description-piece tech-description-piece-2 tech-description-piece-hidden">
                     <h4>Безопасность</h4>
@@ -296,66 +289,66 @@
                     <p>Подходит под любой размер головы, даже для первоклассника. Во время просмотра не получится навредить голове ребёнка за счёт тщательно проработанной конструкции очков.</p>
                 </li>
             </ul>
-            <article class = "switch-buttons tech-buttons">
-                <p>&nbsp</p><p class="switch-count tech-switch-count">01 /</p><p class="switch-count-all">&nbsp04</p>
-                <button class="switch switch-back tech-switch-back">
-                    <img class="switchbackreg" src="img/switch.svg">
-                    <img class="switchbackhover" src="img/switchhover.svg">
+            <div class = "switch-buttons tech-buttons">
+                <p class="switch-count tech-switch-count">01 /</p>
+                <button class="switch switch-back tech-switch-back" aria-label="switch">
+                    <img class="switchbackreg" src="img/switch.svg" alt="switch">
+                    <img class="switchbackhover" src="img/switchhover.svg" alt="switch">
                 </button>
-                <button class="switch switch-forward tech-switch-forward">
-                    <img class="switchforwardreg" src="img/switch.svg">
-                    <img class="switchforwardhover" src="img/switchhover.svg">
+                <button class="switch switch-forward tech-switch-forward" aria-label="switch">
+                    <img class="switchforwardreg" src="img/switch.svg" alt="switch">
+                    <img class="switchforwardhover" src="img/switchhover.svg" alt="switch">
                 </button>
-            </article>
-        </main>
-        <footer class="tech-footer">            
-            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
-        </footer>
+            </div>
+        </article>
+        <article class="tech-footer mid-footer">            
+            <button class="scroll" aria-label="scroll"> <img class="scroll-img" src="img/scroll.svg" alt="scroll"> </button>
+        </article>
     </section>
     <section class="QA part">
-        <main class="QA-main">
+        <article class="QA-main">
             <h2 class="QA-title">Часто задаваемые вопросы&nbsp&nbsp</h2>
             <hr class="underline">
             <ul class="questions">
-                <li class="question">
-                        <div class="question-bar-content">
+                <details class="question">
+                        <summary class="question-bar-content">
                             <h5>Сколько длится сеанс? Дети не устают во время просмотра?</h5>
-                            <button class="plus-pic"><p>+</p></button>
-                        </div>
+                            <div class="plus-pic"></div>
+                        </summary>
                     <p class="answer answer-hidden">пупупу</p>
-                </li>
-                <li class="question">
-                        <div class="question-bar-content">
+                </details>
+                <details class="question">
+                        <summary class="question-bar-content">
                             <h5>Безопасны ли VR-очки для зрения ребёнка? Какие есть ограничения?</h5>
-                            <button class="plus-pic"><p>+</p></button>
-                        </div>
+                            <div class="plus-pic"></div>
+                        </summary>
                     <p class="answer answer-hidden">VR-очки были разработаны специально для того, чтобы каждый человек, независимо от возраста, качества зрения и опыта использования аналогичных продуктов мог безопасно и легко пользоваться этой технологией. У нас есть сертификат качества продукции и лицензия для её использования на территории РФ. Для людей с зрением, отличным от идеального, на VR-очках предусмотрена регулировка диоптрий.</p>
-                </li>
-                <li class="question">
-                        <div class="question-bar-content">
+                </details>
+                <details class="question">
+                        <summary class="question-bar-content">
                             <h5>Действительно ли это образовательный метод, или это лишь игрушка?</h5>
-                            <button class="plus-pic"><p>+</p></button>
-                        </div>
+                            <div class="plus-pic"></div>
+                        </summary>
                     <p class="answer answer-hidden">пупупу</p>
-                </li>
-                <li class="question">
-                        <div class="question-bar-content">
+                </details>
+                <details class="question">
+                        <summary class="question-bar-content">
                             <h5>Всё понятно! Хочу заказать выезд VR планетария, что нужно сделать?</h5>
-                            <button class="plus-pic"><p>+</p></button>
-                        </div>
+                            <div class="plus-pic"></div>
+                        </summary>
                     <p class="answer answer-hidden">пупупу</p>
-                </li>
+                </details>
             </ul>
-        </main>
-        <footer class="QA-footer">            
-            <button class="scroll"> <img class="scroll-img" src="img/scroll.svg"> </button>
-        </footer>
+        </article>
+        <article class="QA-footer mid-footer">            
+            <button class="scroll" aria-label="scroll"> <img class="scroll-img" src="img/scroll.svg" alt="scroll"> </button>
+        </article>
     </section>
     <section class="contacts part">
-        <main class="contacts-main">
+        <article class="contacts-main">
             <h2>Контакты&nbsp&nbsp</h2>
             <hr class="underline">
-            <article class="contacts-article">
+            <div class="contacts-article">
                 <ul class="cities">
                     <li class="city">
                         <h4>Новороссийск</h4>
@@ -383,20 +376,20 @@
                                 id="usname" 
                                 name="user-name" 
                                 placeholder="Ваше имя"
-                                class="input-name" required>
+                                class="input-name question-input" required>
                             <input 
                                 type="email" 
                                 id="usemail" 
                                 name="user-email" 
                                 placeholder="Ваш e-mail"
-                                class="input-email" required>
+                                class="input-email question-input" required>
                         </div>
                         <textarea 
                             type="text" 
                             id="usquestion" 
                             name="user-question" 
                             placeholder="Что вас интересует?"
-                            class="input-text" required></textarea>
+                            class="input-text question-input" required></textarea>
                         <input
                             type="submit"
                             id="subquestion"
@@ -405,20 +398,20 @@
                             class="submit-question">      
                     </form>       
                 </div>
-            </article>
-        </main>
+            </div>
+        </article>
         <footer class="contacts-footer">
             <p>© Digital Planet, 2019</p>
             <p class="copyrite">Детский VR планетарий. Все права защищены.</p>
             <div class="social-networks-end">
-                <a class="facebook-end" href="https://facebook.com"><img src="img/fb.svg" width="8.25" height="16.5"></a>
-                <a class="vk-end" href="https://vk.com"><img src="img/vk.svg" width="23" height="11.25"></a>
+                <a class="facebook-end sn-end" href="https://facebook.com"><img src="img/fb.svg" width="8.25" height="16.5" alt="facebook"></a>
+                <a class="vk-end sn-end" href="https://vk.com"><img src="img/vk.svg" width="23" height="11.25" alt="vk"></a>
             </div>
         </footer>
     </section>
     </section>
     </section>
-    </section>
-    <script src="js/menuorderetc.js"></script>
+    </main>
+    <script src="js/index.js" defer></script>
     </body>
 </html>
